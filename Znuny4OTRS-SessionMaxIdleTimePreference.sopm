@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<otrs_package version="1.0">
+    <Name>Znuny4OTRS-SessionMaxIdleTimePreference</Name>
+    <Version>1.0.0</Version>
+    <Framework>5.0.x</Framework>
+    <PackageRequired Version="5.0.3">Znuny4OTRS-Repo</PackageRequired>
+    <Vendor>Znuny GmbH</Vendor>
+    <URL>http://znuny.com/</URL>
+    <License>GNU AFFERO GENERAL PUBLIC LICENSE Version 3, November 2007</License>
+    <Description Lang="en">This package contains the functionality to define user based session idle times.</Description>
+    <Description Lang="de">Dieses Paket enthält die Funktionalität um benutzerdefinierte Session Zeiten festzulegen.</Description>
+    <Filelist>
+        <File Permission="644" Location="Kernel/Config/Files/Znuny4OTRSSessionMaxIdleTimePreference.xml"/>
+        <File Permission="644" Location="Kernel/Language/de_Znuny4OTRSSessionMaxIdleTimePreference.pm"/>
+        <File Permission="644" Location="Kernel/Modules/PreApplicationZnuny4OTRSSessionMaxIdleTimePreference.pm"/>
+        <File Permission="644" Location="Kernel/Output/HTML/Notification/Znuny4OTRSSessionMaxIdleTimePreference.pm"/>
+        <File Permission="644" Location="Kernel/Output/HTML/Preferences/Znuny4OTRSSessionMaxIdleTimePreference.pm"/>
+        <File Permission="644" Location="scripts/test/Selenium/Agent/Znuny4OTRSSessionMaxIdleTimePreference.t"/>
+    </Filelist>
+</otrs_package>
