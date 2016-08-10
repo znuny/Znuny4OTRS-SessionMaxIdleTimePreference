@@ -10,8 +10,18 @@ before_script:
 
 stages:
   - test
+  - deploy
 
 job_unit_otrs_Znuny4OTRSSessionMaxIdleTimePreference:
   stage: test
   script:
     - su -c "perl /opt/otrs/bin/otrs.Console.pl Dev::UnitTest::Run --verbose --test Selenium/Agent/Znuny4OTRSSessionMaxIdleTimePreference" -s /bin/bash otrs
+
+job_deploy_otrs_Znuny4OTRSSessionMaxIdleTimePreference:
+  stage: deploy
+  script:
+    - git checkout $CI_BUILD_REF_NAME
+    - git filter-branch --force --index-filter "git rm --cached --ignore-unmatch './.gitlab-ci.yml'" --prune-empty --tag-name-filter cat -- --all
+    - git remote rm github
+    - git remote add --mirror github git@github.com:znuny/Znuny4OTRS-SessionMaxIdleTimePreference.git
+    - git push github
