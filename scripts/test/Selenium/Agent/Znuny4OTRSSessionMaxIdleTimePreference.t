@@ -1,5 +1,5 @@
 # --
-# Copyright (C) 2012-2017 Znuny GmbH, http://znuny.com/
+# Copyright (C) 2012-2018 Znuny GmbH, http://znuny.com/
 # --
 # This software comes with ABSOLUTELY NO WARRANTY. For details, see
 # the enclosed file COPYING for license information (AGPL). If you
@@ -71,8 +71,9 @@ my $SeleniumTest = sub {
 
     $SeleniumObject->find_element( '#UserSessionMaxIdleTime', 'css' )->VerifiedSubmit();
 
+    my $SystemTime = $TimeObject->SystemTime();
     my ( $Sec, $Min, $Hour, $Day, $Month, $Year, $WeekDay ) = $TimeObject->SystemTime2Date(
-        SystemTime => $TimeObject->SystemTime() - 1,
+        SystemTime => $SystemTime - 1,
     );
 
     $Min++;
