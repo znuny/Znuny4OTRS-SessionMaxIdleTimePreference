@@ -1,6 +1,6 @@
 # --
-# Copyright (C) 2012-2018 Znuny GmbH, http://znuny.com/
-# Copyright (C) 2001-2018 OTRS AG, https://otrs.com/
+# Copyright (C) 2012-2020 Znuny GmbH, http://znuny.com/
+# Copyright (C) 2001-2020 OTRS AG, https://otrs.com/
 # --
 # $origin: otrs - bdfbf5a6a26938e59ef29101255c159ce696c0a1 - Kernel/System/Web/InterfaceAgent.pm
 # --
