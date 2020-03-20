@@ -88,7 +88,7 @@ my $SeleniumTest = sub {
     $SeleniumObject->refresh();
 
     $SeleniumObject->PageContains(
-        String => 'Session abgelaufen. Bitte neu anmelden.',
+        String => 'Sitzung abgelaufen. Bitte neu anmelden.',
     );
 };
 
